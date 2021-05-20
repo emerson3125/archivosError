@@ -12,7 +12,7 @@ function userSave (req, res) {
     });
     if(req.body.password != null){
         bcrypt.hash(req.body.password, null, null, (err, hash) =>{
-            userG.password = hash;
+            userG.passwor = hash;
             if(userG.name != null && userG.surname != null &&userG.email != null){
                 userG.save((err, data) =>{
                     if(err){
